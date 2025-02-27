@@ -1090,50 +1090,48 @@
   "dodger": [
     {
       "name": "Dread Razor",
-      "description": "+1 ::range_gold:: Range if you are adjacent to\nan empty minion spawn point in the\nbattle zone. Target a unit in range.",
+      "description": "**Choose one —**\n>>Target a unit adjacent to you.\n>>If you are adjacent to an empty spawn point\n>in the battle zone, target a unit in range.",
       "color": "GOLD",
       "initiative": 12,
       "primaryAction": "ATTACK",
-      "primaryValue": 1,
+      "primaryValue": 2,
       "modifier": "RANGE",
-      "modifierValue": 1,
-      "modifierValueSign": "PLUS",
+      "modifierValue": 2,
       "secondaryMovement": 1,
       "secondaryDefense": 1
     },
     {
       "name": "Rusty Razor",
-      "description": "Cannot target minions.\n+1 ::range_gold:: Range if you are adjacent to an empty\nminion spawn point in the battle zone. ",
+      "description": "**Choose one —**\n>>Target a hero adjacent to you.\n>>If you are adjacent to an empty spawn point\n>in the battle zone, target a hero in range.",
       "color": "GOLD",
       "handicapped": true,
       "initiative": 11,
       "primaryAction": "ATTACK",
       "primaryValue": 1,
       "modifier": "RANGE",
-      "modifierValue": 1,
-      "modifierValueSign": "PLUS",
+      "modifierValue": 2,
       "secondaryMovement": 1,
       "secondaryDefense": 1
     },
     {
       "name": "Death Trap",
-      "description": "You may remove a friendly minion in radius.\nOne enemy hero in radius who is adjacent\nto an empty minion spawn point in the\nbattle zone, discards a card, if able.",
+      "description": "An enemy hero in radius who is\nadjacent to an empty spawn point in\nthe battle zone discards a card, if able.",
       "color": "SILVER",
-      "initiative": 6,
+      "initiative": 7,
       "primaryAction": "SKILL",
       "modifier": "AREA",
-      "modifierValue": 3,
+      "modifierValue": 4,
       "secondaryDefense": 1
     },
     {
       "name": "Tide of Darkness",
-      "description": "Whenever you perform an action, all spaces\ncount as if they are in a battle zone\nand have a minion spawn point.",
+      "description": "While you are performing an action, all spaces\ncount as if they were in the battle zone and\nhad a friendly minion spawn point.",
       "color": "PURPLE",
       "level": 4
     },
     {
       "name": "Shield of Decay",
-      "description": "+3 ::defense_blue:: Defense if there are 2 or more\nempty minion spawn points in\nradius in the battle zone.",
+      "description": "+2 ::defense_blue:: Defense if there are 2 or more empty\n spawn points in radius in the battle zone.",
       "color": "BLUE",
       "level": 1,
       "initiative": 10,
@@ -1146,21 +1144,20 @@
     },
     {
       "name": "Littlefinger of Death",
-      "description": "Target a unit in range. +2 ::attack_red:: Attack if you\ntarget a hero with a card in the discard.",
+      "description": "**Choose one —**\n>>Target a unit adjacent to you.\n>>Target a hero in range who has one or\n>more cards in the discard.",
       "color": "RED",
       "level": 1,
       "initiative": 9,
       "primaryAction": "ATTACK",
-      "primaryValue": 1,
-      "primaryValueSign": "PLUS",
+      "primaryValue": 4,
       "modifier": "RANGE",
       "modifierValue": 2,
-      "secondaryMovement": 5,
-      "secondaryDefense": 3
+      "secondaryMovement": 4,
+      "secondaryDefense": 5
     },
     {
       "name": "Dark Ritual",
-      "description": "You may remove a friendly minion in radius.\nIf there are 3 or more empty minion spawn\npoints in radius in the battle zone, gain 1 coin.\n~(Removing the minion is optional!)",
+      "description": "If there are 2 or more empty minion spawn points\nin radius in the battle zone, gain 1 coin.",
       "color": "GREEN",
       "level": 1,
       "initiative": 3,
@@ -1172,7 +1169,7 @@
     },
     {
       "name": "Vampiric Shield",
-      "description": "You may remove a friendly minion in radius.\n+3 ::defense_blue:: Defense if there are 2 or more\nempty minion spawn points in\nradius in the battle zone.",
+      "description": "+2 ::defense_blue:: Defense if there are 2 or more empty\nspawn points in radius in the battle zone.",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -1186,11 +1183,11 @@
       "modifier": "AREA",
       "modifierValue": 2,
       "secondaryMovement": 3,
-      "item": "ATTACK"
+      "item": "INITIATIVE"
     },
     {
       "name": "Finger of Death",
-      "description": "Target a unit in range. +3 ::attack_red:: if you\ntarget a hero with a card in the discard.",
+      "description": "**Choose one —**\n>>Target a unit adjacent to you.\n>>Target a hero in range who has one or\n>more cards in the discard.",
       "color": "RED",
       "level": 2,
       "variant": {
@@ -1199,17 +1196,16 @@
       },
       "initiative": 9,
       "primaryAction": "ATTACK",
-      "primaryValue": 1,
-      "primaryValueSign": "PLUS",
+      "primaryValue": 4,
       "modifier": "RANGE",
       "modifierValue": 3,
-      "secondaryMovement": 5,
-      "secondaryDefense": 4,
-      "item": "DEFENSE"
+      "secondaryMovement": 4,
+      "secondaryDefense": 6,
+      "item": "INITIATIVE"
     },
     {
       "name": "Darker Ritual",
-      "description": "You may remove a friendly minion in radius.\nIf there are 3 or more empty minion spawn\npoints in radius in the battle zone, gain 2 coins.",
+      "description": "If there are 2 or more empty spawn points\n in radius in the battle zone, gain 2 coins.",
       "color": "GREEN",
       "level": 2,
       "variant": {
@@ -1222,11 +1218,11 @@
       "modifierValue": 3,
       "secondaryMovement": 2,
       "secondaryDefense": 2,
-      "item": "INITIATIVE"
+      "item": "DEFENSE"
     },
     {
-      "name": "Drain Essence",
-      "description": "Perform a non-attack action of a card in\nthe discard of an enemy hero in radius;\napply no item bonuses.",
+      "name": "Weakness",
+      "description": "**This turn:** Enemy heroes\nin radius have -4 ::attack_silver:: Attack.\n~(They can still attack, even with a negative attack value).",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -1239,11 +1235,11 @@
       "modifierValue": 4,
       "secondaryMovement": 3,
       "secondaryDefense": 4,
-      "item": "DEFENSE"
+      "item": "ATTACK"
     },
     {
       "name": "Burning Skull",
-      "description": "Target a unit in range. After the attack:\nPush every enemy unit adjacent to the target\n1 space away from the target's space.",
+      "description": "Target a unit in range. After the attack:\nMove up to 1 minion adjacent to you\n1 space, to a space not adjacent to you.",
       "color": "RED",
       "level": 2,
       "variant": {
@@ -1252,16 +1248,16 @@
       },
       "initiative": 9,
       "primaryAction": "ATTACK",
-      "primaryValue": 4,
+      "primaryValue": 3,
       "modifier": "RANGE",
       "modifierValue": 2,
-      "secondaryMovement": 5,
-      "secondaryDefense": 6,
-      "item": "INITIATIVE"
+      "secondaryMovement": 4,
+      "secondaryDefense": 5,
+      "item": "DEFENSE"
     },
     {
       "name": "Necromancy",
-      "description": "If an enemy hero in radius has a card in\nthe discard, respawn a friendly minion in a\nspawn point adjacent to you in the battle zone.",
+      "description": "Respawn a friendly minion in an empty friendly\nspawn point adjacent to you in the battle zone.",
       "color": "GREEN",
       "level": 2,
       "variant": {
@@ -1270,15 +1266,13 @@
       },
       "initiative": 3,
       "primaryAction": "SKILL",
-      "modifier": "AREA",
-      "modifierValue": 4,
       "secondaryMovement": 2,
       "secondaryDefense": 2,
       "item": "ATTACK"
     },
     {
       "name": "Aegis of Doom",
-      "description": "You may remove a friendly minion in radius.\nIf there are 2 or more empty minion spawn\npoints in radius in a battle zone +4 ::defense_blue::\nDefense and **This turn:** You are immune.",
+      "description": "+4 ::defense_blue:: Defense if there are 2 or more empty\nspawn points in radius in the battle zone.",
       "color": "BLUE",
       "level": 3,
       "variant": {
@@ -1287,16 +1281,16 @@
       },
       "initiative": 11,
       "primaryAction": "DEFENSE",
-      "primaryValue": 5,
+      "primaryValue": 4,
       "primaryValueSign": "PLUS",
       "modifier": "AREA",
       "modifierValue": 2,
       "secondaryMovement": 3,
-      "item": "RANGE"
+      "item": "INITIATIVE"
     },
     {
       "name": "Middlefinger of Death",
-      "description": "Target a unit in range. +3 ::attack_red:: if you\ntarget a hero with a card in the discard.\n**This turn:** The target cannot retrieve cards.",
+      "description": "**Choose one, or both** on different targets —\n>>Target a unit adjacent to you.\n>>Target a hero in range who has one or\n>more cards in the discard.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -1305,17 +1299,16 @@
       },
       "initiative": 10,
       "primaryAction": "ATTACK",
-      "primaryValue": 2,
-      "primaryValueSign": "PLUS",
+      "primaryValue": 5,
       "modifier": "RANGE",
       "modifierValue": 3,
-      "secondaryMovement": 5,
-      "secondaryDefense": 4,
-      "item": "AREA"
+      "secondaryMovement": 4,
+      "secondaryDefense": 6,
+      "item": "MOVEMENT"
     },
     {
       "name": "Darkest Ritual",
-      "description": "You may remove a friendly minion in radius.\nIf there are 3 or more empty minion spawn\npoints in radius in the battle zone, gain 2\ncoins, and you may retrieve a discarded card.",
+      "description": "If there are 2 or more empty spawn points in\nradius in the battle zone, gain 2 coins. If you\nhave your Ultimate, gain an ::attack_silver:: Attack item.\n~(Use any spare card from the box with the corresponding item.)",
       "color": "GREEN",
       "level": 3,
       "variant": {
@@ -1328,11 +1321,11 @@
       "modifierValue": 3,
       "secondaryMovement": 2,
       "secondaryDefense": 3,
-      "item": "INITIATIVE"
+      "item": "DEFENSE"
     },
     {
-      "name": "Soul Siphon",
-      "description": "Perform an action of a card in the\ndiscard of an enemy hero in radius,\napply no item bonuses.",
+      "name": "Enfeeblement",
+      "description": "**This turn:** Enemy heroes in radius have\n-6 ::attack_silver:: Attack and cannot repeat actions.",
       "color": "BLUE",
       "level": 3,
       "variant": {
@@ -1349,7 +1342,7 @@
     },
     {
       "name": "Blazing Skull",
-      "description": "Target a unit in range. Before the attack:\nPush every enemy unit adjacent to the\ntarget 1 space away from the target's space.",
+      "description": "Target a unit in range. After the attack:\nMove up to 2 minions adjacent to you\n1 space each, to spaces not adjacent to you.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -1358,16 +1351,16 @@
       },
       "initiative": 10,
       "primaryAction": "ATTACK",
-      "primaryValue": 5,
+      "primaryValue": 4,
       "modifier": "RANGE",
       "modifierValue": 2,
-      "secondaryMovement": 5,
-      "secondaryDefense": 6,
-      "item": "MOVEMENT"
+      "secondaryMovement": 4,
+      "secondaryDefense": 5,
+      "item": "AREA"
     },
     {
       "name": "Necromastery",
-      "description": "If an enemy hero in radius has a card in\nthe discard, respawn a friendly minion in\na spawn point in radius in the battle zone.",
+      "description": "Respawn a friendly minion in an empty friendly\nspawn point in radius in the battle zone.",
       "color": "GREEN",
       "level": 3,
       "variant": {
@@ -1377,10 +1370,10 @@
       "initiative": 2,
       "primaryAction": "SKILL",
       "modifier": "AREA",
-      "modifierValue": 4,
+      "modifierValue": 1,
       "secondaryMovement": 2,
       "secondaryDefense": 3,
-      "item": "DEFENSE"
+      "item": "RANGE"
     }
   ],
   "garrus": [

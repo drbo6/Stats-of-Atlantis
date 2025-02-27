@@ -874,12 +874,12 @@ function addInitiative(context: CanvasRenderingContext2D, value: number, x: numb
     addSquishedOutlinedText(context, value.toString(), x, y, 197, 14, 0.92, false, bonus)
   else {
     const supposedValue = cardStats.get(color)!.get(Stat.INITIATIVE)!.get(level)![initiativeStat - 1]
-    const difference = value - supposedValue
-    let symbol = ""
-    if (difference == 1) symbol = "›"
-    if (difference > 1) symbol = "»"
-    if (difference == -1) symbol = "‹"
-    if (difference < -1) symbol = "«"
+	const difference = value - supposedValue // value is the actual value of the stat, supposedValue is taken from a constant so I guess the dev had a value in mind for each card level and color that he is comparing with
+	let symbol = ""
+	//if (difference == 1) symbol = "›"
+	//if (difference > 1) symbol = "»"
+	//if (difference == -1) symbol = "‹"
+	//if (difference < -1) symbol = "«"
     addSquishedOutlinedText(context, symbol, x, y + 25, 296, 14, 0.92, false, bonus, false)
   }
 }
@@ -897,12 +897,12 @@ function addPrimaryValue(context: CanvasRenderingContext2D, value: number, x: nu
   	return addSquishedOutlinedText(context, value.toString(), x, y, 156, 14, 0.875, false, bonus)
 	else {
 		const supposedValue = cardStats.get(color)!.get(stat)!.get(level)![statNumber - 1]
-		const difference = value - supposedValue
+		const difference = value - supposedValue // value is the actual value of the stat, supposedValue is taken from a constant so I guess the dev had a value in mind for each card level and color that he is comparing with
 		let symbol = ""
-		if (difference == 1) symbol = "›"
-		if (difference > 1) symbol = "»"
-		if (difference == -1) symbol = "‹"
-		if (difference < -1) symbol = "«"
+		//if (difference == 1) symbol = "›"
+		//if (difference > 1) symbol = "»"
+		//if (difference == -1) symbol = "‹"
+		//if (difference < -1) symbol = "«"
 		return addSquishedOutlinedText(context, symbol, x, y + 18, 244, 14, 0.875, false, bonus, false)
 	}
 }
@@ -916,12 +916,12 @@ function addSecondaryValue(context: CanvasRenderingContext2D, value: number, x: 
   	addSquishedOutlinedText(context, value.toString(), x, y, 136, 14, 0.875, false, bonus)
 	else {
 		const supposedValue = cardStats.get(color)!.get(stat)!.get(level)![statNumber - 1]
-		const difference = value - supposedValue
+		const difference = value - supposedValue // value is the actual value of the stat, supposedValue is taken from a constant so I guess the dev had a value in mind for each card level and color that he is comparing with
 		let symbol = ""
-		if (difference == 1) symbol = "›"
-		if (difference > 1) symbol = "»"
-		if (difference == -1) symbol = "‹"
-		if (difference < -1) symbol = "«"
+		//if (difference == 1) symbol = "›"
+		//if (difference > 1) symbol = "»"
+		//if (difference == -1) symbol = "‹"
+		//if (difference < -1) symbol = "«"
 		return addSquishedOutlinedText(context, symbol, x, y + 10, 204, 14, 0.875, false, bonus, false)
 	}
 }
