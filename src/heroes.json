@@ -2,7 +2,7 @@
   "arien": [
     {
       "name": "Noble Blade",
-      "description": "Target a unit adjacent to you. Before the\nattack: You may move another unit that\nis adjacent to the target 1 space.\n~(\\\"Another unit\\\" does not include you).",
+      "description": "Target a unit adjacent to you.\nBefore the attack: You may move another\nunit that is adjacent to the target 1 space.\n~(\\\"Another unit\\\" never includes you).",
       "color": "GOLD",
       "initiative": 11,
       "primaryAction": "ATTACK",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Ceremonial Blade",
-      "description": "Cannot target minions.\nBefore the attack: You may move a minion\nthat is adjacent to the target 1 space.",
+      "description": "Target a hero adjacent to you.\nBefore the attack: You may move a minion\n that is adjacent to the target 1 space.",
       "color": "GOLD",
       "handicapped": true,
       "initiative": 10,
@@ -23,17 +23,17 @@
     },
     {
       "name": "Spell Break",
-      "description": "**This turn:** Enemy heroes in radius\ncannot perform skills.\n~(Spell Break will not stop an attack action).",
+      "description": "**This turn:** Enemy heroes in radius cannot\nperform skill actions, except on gold cards.\n~(Skill is an action type. Other actions are unaffected.)",
       "color": "SILVER",
-      "initiative": 12,
+      "initiative": 13,
       "primaryAction": "SKILL",
       "modifier": "AREA",
-      "modifierValue": 2,
+      "modifierValue": 3,
       "secondaryDefense": 3
     },
     {
       "name": "Living Tsunami",
-      "description": "After you perform a basic skill, you\nmay trigger a minion battle in the\nbattle zone you are in.",
+      "description": "Once per turn, before performing an\nAttack action, you may move 1 space.",
       "color": "PURPLE",
       "level": 4
     },
@@ -48,20 +48,18 @@
       "secondaryMovement": 3
     },
     {
-      "name": "Gush of Water",
-      "description": "Target a unit in range. After the attack:\nPush up to one token, or an enemy\nunit, adjacent to you 1 space.",
+      "name": "Dangerous Current",
+      "description": "Target a unit adjacent to you. Before the\nattack: Up to 1 enemy hero in any of the\n2 spaces in a straight line directly behind\nthe target discards a card, or is defeated.",
       "color": "RED",
       "level": 1,
       "initiative": 8,
       "primaryAction": "ATTACK",
-      "primaryValue": 4,
-      "modifier": "RANGE",
-      "modifierValue": 1,
+      "primaryValue": 6,
       "secondaryMovement": 4,
-      "secondaryDefense": 3
+      "secondaryDefense": 6
     },
     {
-      "name": "Waveform",
+      "name": "Liquid Leap",
       "description": "Place yourself into a space in range\nwithout a spawn point and not adjacent\nto an empty spawn point.",
       "color": "GREEN",
       "level": 1,
@@ -74,7 +72,7 @@
     },
     {
       "name": "Expert Duelist",
-      "description": "Ignore all minion defense modifiers.\n**This turn:** You are immune\nto all other enemy attack actions.",
+      "description": "Ignore all minion defense modifiers.\n**This turn:** You are immune to attack actions\nof all enemy heroes, except this attacker.",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -85,11 +83,11 @@
       "primaryAction": "DEFENSE",
       "primaryValue": 6,
       "secondaryMovement": 3,
-      "item": "DEFENSE"
+      "item": "INITIATIVE"
     },
     {
-      "name": "High Tide",
-      "description": "Target a unit in range. After the attack:\nPush up to one token, or an enemy\nunit, adjacent to you 1 space.",
+      "name": "Raging Stream",
+      "description": "Target a unit adjacent to you. Before the\n attack: Up to 1 enemy hero in any of the\n3 spaces in a straight line directly behind\nthe target discards a card, or is defeated.",
       "color": "RED",
       "level": 2,
       "variant": {
@@ -98,12 +96,10 @@
       },
       "initiative": 8,
       "primaryAction": "ATTACK",
-      "primaryValue": 5,
-      "modifier": "RANGE",
-      "modifierValue": 2,
+      "primaryValue": 7,
       "secondaryMovement": 4,
-      "secondaryDefense": 4,
-      "item": "DEFENSE"
+      "secondaryDefense": 7,
+      "item": "INITIATIVE"
     },
     {
       "name": "Magical Current",
@@ -120,11 +116,11 @@
       "modifierValue": 3,
       "secondaryMovement": 2,
       "secondaryDefense": 3,
-      "item": "INITIATIVE"
+      "item": "ATTACK"
     },
     {
       "name": "Slippery Ground",
-      "description": "**This turn:** Enemies in radius cannot move\nmore than 1 space with a movement action.\n~(Enemies who start movement out of radius are unaffected).",
+      "description": "**This turn:** Enemy heroes adjacent\nto you cannot fast travel, or move more\nthan 1 space with a movement action.",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -132,16 +128,14 @@
         "second": 2
       },
       "initiative": 10,
-      "primaryAction": "SKILL",
-      "modifier": "AREA",
-      "modifierValue": 3,
-      "secondaryMovement": 3,
+      "primaryAction": "MOVEMENT",
+      "primaryValue": 3,
       "secondaryDefense": 6,
       "item": "ATTACK"
     },
     {
-      "name": "Violent Torrent",
-      "description": "Target a unit adjacent to you. Before the\nattack: One enemy hero in any of the 3\nspaces in a straight line directly behind\nthe target discards a card, or is defeated.",
+      "name": "Rogue Wave",
+      "description": "Target a unit in range.\nAfter the attack: You may push an enemy\nunit adjacent to you up to 2 spaces.",
       "color": "RED",
       "level": 2,
       "variant": {
@@ -150,14 +144,16 @@
       },
       "initiative": 8,
       "primaryAction": "ATTACK",
-      "primaryValue": 7,
+      "primaryValue": 4,
+      "modifier": "RANGE",
+      "modifierValue": 2,
       "secondaryMovement": 4,
-      "secondaryDefense": 7,
-      "item": "INITIATIVE"
-    },
+      "secondaryDefense": 4,
+      "item": "DEFENSE"
+    },	
     {
-      "name": "Arcane Swap",
-      "description": "Swap with a minion or a friendly hero in range.\n~(Swap places with the target. This is not movement).",
+      "name": "Arcane Whirlpool",
+      "description": "Swap with an enemy minion in range.\n~(Swap places with the target. This is not movement).",
       "color": "GREEN",
       "level": 2,
       "variant": {
@@ -167,14 +163,14 @@
       "initiative": 4,
       "primaryAction": "SKILL",
       "modifier": "RANGE",
-      "modifierValue": 3,
+      "modifierValue": 4,
       "secondaryMovement": 2,
       "secondaryDefense": 3,
-      "item": "ATTACK"
+      "item": "DEFENSE"
     },
     {
       "name": "Master Duelist",
-      "description": "Ignore all minion defense modifiers.\n**This turn:** You are immune\nto all other enemy actions.",
+      "description": "Ignore all minion defense modifiers.\n**This round:** You are immune to attack actions\nof all enemy heroes, except the attacker.",
       "color": "BLUE",
       "level": 3,
       "variant": {
@@ -188,8 +184,8 @@
       "item": "RANGE"
     },
     {
-      "name": "Rogue Wave",
-      "description": "Target a unit in range. After the attack:\nMove the target up to 1 space.\nPush up to one token, or an enemy\nunit, adjacent to you 1 space.",
+      "name": "Violent Torrent",
+      "description": "Target a unit adjacent to you. Before the\nattack: Up to 1 enemy hero in any of the 5\nspaces in a straight line directly behind the\ntarget discards a card, or is defeated.\nMay repeat once on a different unit.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -198,13 +194,11 @@
       },
       "initiative": 9,
       "primaryAction": "ATTACK",
-      "primaryValue": 5,
-      "modifier": "RANGE",
-      "modifierValue": 2,
+      "primaryValue": 7,
       "secondaryMovement": 4,
-      "secondaryDefense": 4,
-      "item": "MOVEMENT"
-    },
+      "secondaryDefense": 7,
+      "item": "INITIATIVE"
+    },	
     {
       "name": "Stranger Tide",
       "description": "Place yourself into a space in\nrange without a spawn point.",
@@ -220,11 +214,11 @@
       "modifierValue": 3,
       "secondaryMovement": 2,
       "secondaryDefense": 4,
-      "item": "DEFENSE"
+      "item": "AREA"
     },
     {
       "name": "Deluge",
-      "description": "**This turn and next turn:**\nEnemies in radius cannot move more\nthan 1 space with a movement action.",
+      "description": "**This turn:** Enemy heroes in radius\ncannot fast travel, or move more than\n1 space with a movement action.",
       "color": "BLUE",
       "level": 3,
       "variant": {
@@ -232,16 +226,17 @@
         "second": 2
       },
       "initiative": 10,
-      "primaryAction": "SKILL",
+      "primaryAction": "MOVEMENT",
+	  "primaryValue": 3,
       "modifier": "AREA",
-      "modifierValue": 3,
+      "modifierValue": 1,
       "secondaryMovement": 3,
       "secondaryDefense": 6,
       "item": "ATTACK"
     },
     {
-      "name": "Raging Waters",
-      "description": "Target a unit adjacent to you. Before the\nattack: One enemy hero in any of the 5\nspaces in a straight line directly behind\nthe target discards a card, or is defeated.\nMay repeat once on a different target.",
+      "name": "Tidal Blast",
+      "description": "Target a unit in range.\nAfter the attack: You may push an enemy\nunit adjacent to you up to 3 spaces.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -250,14 +245,16 @@
       },
       "initiative": 9,
       "primaryAction": "ATTACK",
-      "primaryValue": 7,
+      "primaryValue": 4,
+      "modifier": "RANGE",
+      "modifierValue": 2,	  
       "secondaryMovement": 4,
-      "secondaryDefense": 7,
-      "item": "INITIATIVE"
+      "secondaryDefense": 4,
+      "item": "MOVEMENT"
     },
     {
-      "name": "Empowered Swap",
-      "description": "Swap with a unit or a token in range.",
+      "name": "Ebb and Flow",
+      "description": "Swap with an enemy minion in range;\nif it was adjacent to you, may repeat once.",
       "color": "GREEN",
       "level": 3,
       "variant": {
@@ -267,10 +264,10 @@
       "initiative": 3,
       "primaryAction": "SKILL",
       "modifier": "RANGE",
-      "modifierValue": 3,
+      "modifierValue": 4,
       "secondaryMovement": 2,
       "secondaryDefense": 4,
-      "item": "AREA"
+      "item": "DEFENSE"
     }
   ],
   "bain": [

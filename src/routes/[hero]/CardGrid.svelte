@@ -466,12 +466,12 @@
       )
   }
 
-  $: showNumbers = false
+  $: showNumbers = true // Disable this to show numbers by default
   $: showHandicap = false
 
   const labelColor = (disabled: boolean): string => disabled ? "gray" : "white"
 
-  $: disableShowNumbers = true
+  $: disableShowNumbers = false // Edit this to show numbers
 
   const hero = heroes[heroName] as Hero
   const fullName = hero.name + " " + hero.title
@@ -1246,7 +1246,7 @@
 
   function onAvatarClick() {
     avatarClickCounter++
-    if (avatarClickCounter >= 3) disableShowNumbers = false
+    if (avatarClickCounter >= 10) disableShowNumbers = false
   }
 </script>
 
