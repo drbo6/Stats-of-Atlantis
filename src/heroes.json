@@ -4161,8 +4161,8 @@
       "color": "GOLD",
       "initiative": 13,
       "primaryAction": "ATTACK",
-      "primaryValue": 2,
-      "secondaryMovement": 2,
+      "primaryValue": 3,
+      "secondaryMovement": 1,
       "secondaryDefense": 1
     },
     {
@@ -4172,15 +4172,15 @@
       "handicapped": true,
       "initiative": 12,
       "primaryAction": "ATTACK",
-      "primaryValue": 1,
+      "primaryValue": 2,
       "secondaryMovement": 1,
       "secondaryDefense": 1
     },
     {
       "name": "Blend Into Shadows",
-      "description": "If you are adjacent to an obstacle, place\nyourself into a space in radius not adjacent\nto an enemy unit. If you do, **Next turn:** You\nare immune, and may move through units.",
+      "description": "If you are adjacent to a terrain, place yourself\ninto a space in radius; if you do, **Next turn:**\nYou are immune to enemy attack actions.",
       "color": "SILVER",
-      "initiative": 3,
+      "initiative": 6,
       "primaryAction": "SKILL",
       "modifier": "AREA",
       "modifierValue": 2,
@@ -4188,7 +4188,7 @@
     },
     {
       "name": "Cloak and Daggers",
-      "description": "If you are immune: Before you perform\n(or repeat) any action, move up to 2 spaces;\nafter you perform a basic attack, you may\nrepeat it once on a different target.",
+      "description": "After you perform a basic action you may\nrepeat it once; if you repeat an attack\naction, you cannot target the same unit.",
       "color": "PURPLE",
       "level": 4
     },
@@ -4210,22 +4210,22 @@
       "initiative": 9,
       "primaryAction": "ATTACK",
       "primaryValue": 3,
-      "secondaryMovement": 5,
+      "secondaryMovement": 4,
       "secondaryDefense": 3
     },
     {
       "name": "Light-Fingered",
-      "description": "Move up to 2 spaces, then take up to 1 coin\nfrom an enemy hero adjacent to you.\nThen move 2 spaces in a straight line, if able.",
+      "description": "You may move 1 space.\nTake 1 coin from an enemy hero adjacent\nto you; if you do, you may move 1 space.",
       "color": "GREEN",
       "level": 1,
       "initiative": 2,
       "primaryAction": "SKILL",
       "secondaryMovement": 3,
-      "secondaryDefense": 2
+      "secondaryDefense": 1
     },
     {
       "name": "Sidestep",
-      "description": "Block a ranged attack. If you do, you may\nmove 2 spaces in a straight line.",
+      "description": "Block a ranged attack. You may move 1 space.",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -4236,7 +4236,7 @@
       "primaryAction": "DEFENSE",
       "primaryValueSign": "EXCLAMATION",
       "secondaryMovement": 3,
-      "item": "DEFENSE"
+      "item": "ATTACK"
     },
     {
       "name": "Combat Reflexes",
@@ -4250,13 +4250,13 @@
       "initiative": 9,
       "primaryAction": "ATTACK",
       "primaryValue": 4,
-      "secondaryMovement": 5,
-      "secondaryDefense": 4,
+      "secondaryMovement": 4,
+      "secondaryDefense": 3,
       "item": "INITIATIVE"
     },
     {
       "name": "Pick Pocket",
-      "description": "Move up to 2 spaces, then take up to 2 coins\nfrom an enemy hero adjacent to you.\nThen move 2 spaces in a straight line, if able.",
+      "description": "Move up to 2 spaces.\nTake 1 coin from an enemy hero adjacent\nto you; if you do, you may move 1 space.",
       "color": "GREEN",
       "level": 2,
       "variant": {
@@ -4266,7 +4266,7 @@
       "initiative": 2,
       "primaryAction": "SKILL",
       "secondaryMovement": 3,
-      "secondaryDefense": 2,
+      "secondaryDefense": 1,
       "item": "ATTACK"
     },
     {
@@ -4282,11 +4282,11 @@
       "primaryAction": "DEFENSE",
       "primaryValueSign": "EXCLAMATION",
       "secondaryMovement": 3,
-      "item": "ATTACK"
+      "item": "DEFENSE"
     },
     {
       "name": "Backstab",
-      "description": "Target a unit adjacent to you. +2 ::attack_red:: Attack\nif a friendly unit is adjacent to the target.\n~(A \"friendly unit\" is another hero or a minion on your team).",
+      "description": "Target a unit adjacent to you; If a friendly\nunit is adjacent to the target, +2 ::attack_red:: Attack.\n~(A \"friendly unit\" is another hero or a minion on your team).",
       "color": "RED",
       "level": 2,
       "variant": {
@@ -4295,15 +4295,15 @@
       },
       "initiative": 9,
       "primaryAction": "ATTACK",
-      "primaryValue": 4,
+      "primaryValue": 5,
       "primaryValueSign": "PLUS",
       "secondaryMovement": 5,
-      "secondaryDefense": 6,
+      "secondaryDefense": 5,
       "item": "DEFENSE"
     },
     {
       "name": "Poisoned Dagger",
-      "description": "Give a hero in range a ::marker_poison:: poison marker.\nEach ::initiative:: Initiative and ::attack_silver:: Attack item of a\nhero with a poison marker reduces that\nvalue by 1, instead of increasing it by 1.",
+      "description": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with the poison marker has\n-1 ::initiative:: Initiative, -1 ::attack_silver:: Attack and -1 ::defense_silver:: Defense.",
       "color": "GREEN",
       "level": 2,
       "variant": {
@@ -4315,12 +4315,12 @@
       "modifier": "RANGE",
       "modifierValue": 3,
       "secondaryMovement": 3,
-      "secondaryDefense": 2,
+      "secondaryDefense": 1,
       "item": "INITIATIVE"
     },
     {
       "name": "Evade",
-      "description": "Block a ranged attack. If you do, you may\nmove 2 spaces in a straight line and you\nmay swap this card with a card in your hand.",
+      "description": "Block a ranged attack.\nYou may move 1 space. You may retrieve\nyour resolved or discarded basic skill card.",
       "color": "BLUE",
       "level": 3,
       "variant": {
@@ -4335,7 +4335,7 @@
     },
     {
       "name": "Leaping Strike",
-      "description": "Before the attack: Move up to 1 space.\nTarget a unit adjacent to you.\nAfter the attack: Move up to 1 space.",
+      "description": "Before the attack: You may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: You may move 1 space.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -4345,13 +4345,13 @@
       "initiative": 10,
       "primaryAction": "ATTACK",
       "primaryValue": 4,
-      "secondaryMovement": 5,
+      "secondaryMovement": 4,
       "secondaryDefense": 4,
       "item": "AREA"
     },
     {
       "name": "Master Thief",
-      "description": "Move up to 2 spaces, then take up to 3 coins\nfrom an enemy hero adjacent to you.\nThen move 2 spaces in a straight line, if able.",
+      "description": "Move up to 2 spaces. Take 1 or 2 coins\nfrom an enemy hero adjacent to you;\nif you do, you may move up to 2 spaces.",
       "color": "GREEN",
       "level": 3,
       "variant": {
@@ -4361,8 +4361,8 @@
       "initiative": 1,
       "primaryAction": "SKILL",
       "secondaryMovement": 3,
-      "secondaryDefense": 3,
-      "item": "INITIATIVE"
+      "secondaryDefense": 2,
+      "item": "MOVEMENT"
     },
     {
       "name": "Reposte",
@@ -4381,7 +4381,7 @@
     },
     {
       "name": "Backstab with a Ballista",
-      "description": "Target a unit in range. +3 ::attack_red:: Attack\nand this attack cannot be blocked,\nif a friendly unit is adjacent to the target.\n~(\"Block\" is a keyword - the target hero can still defend!)",
+      "description": "Target a unit in range;\nIf a friendly unit is adjacent to the target\n+2 ::attack_red:: Attack and the target cannot\nperform a primary action to defend.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -4390,7 +4390,7 @@
       },
       "initiative": 10,
       "primaryAction": "ATTACK",
-      "primaryValue": 4,
+      "primaryValue": 5,
       "primaryValueSign": "PLUS",
       "modifier": "RANGE",
       "modifierValue": 1,
@@ -4400,7 +4400,7 @@
     },
     {
       "name": "Poisoned Dart",
-      "description": "Give a hero in range a ::marker_poison:: poison marker.\nEach ::initiative:: Initiative, ::item_attack:: Attack, and ::item_defense:: Defense\nitem of a hero with a poison marker reduce\nthat value by 1, instead of increasing it by 1.",
+      "description": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with the poison marker has\n-2 ::initiative:: Initiative, -2 ::attack_silver:: Attack and -2 ::defense_silver:: Defense.",
       "color": "GREEN",
       "level": 3,
       "variant": {
@@ -4412,8 +4412,8 @@
       "modifier": "RANGE",
       "modifierValue": 3,
       "secondaryMovement": 3,
-      "secondaryDefense": 3,
-      "item": "MOVEMENT"
+      "secondaryDefense": 2,
+      "item": "INITIATIVE"
     }
   ],
   "trinkets": [
