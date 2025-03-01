@@ -4966,48 +4966,54 @@
   ],
   "wasp": [
     {
-      "name": "Dazzling Dagger",
-      "description": "Target a unit adjacent to you. After the\n attack: Cancel active effects on skill\n cards of enemy heroes adjacent to you.\n **This turn:** Enemy heroes adjacent to\n you cannot perform skill actions.",
+      "name": "Magnetic Dagger",
+      "description": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Enemy units\nin radius cannot be swapped or placed\nby themselves, or by enemy heroes.",
       "color": "GOLD",
       "initiative": 12,
       "primaryAction": "ATTACK",
       "primaryValue": 3,
+      "modifier": "AREA",
+      "modifierValue": 3,	  
       "secondaryMovement": 1,
       "secondaryDefense": 2
     },
     {
-      "name": "Depleted Dagger",
-      "description": "Cannot target minions. After the attack:\n**This turn:** Adjacent enemy heroes\ncannot perform Skills. ",
+      "name": "Crackling Dagger",
+      "description": "Target a hero adjacent to you.\nAfter the attack: **This turn**: Enemy units\nin radius cannot be swapped or placed\nby themselves, or by enemy heroes.",
       "color": "GOLD",
       "handicapped": true,
       "initiative": 11,
       "primaryAction": "ATTACK",
       "primaryValue": 2,
+      "modifier": "AREA",
+      "modifierValue": 3,		  
       "secondaryMovement": 1,
       "secondaryDefense": 1
     },
     {
       "name": "Static Barrier",
-      "description": "**This turn:** Enemy units in radius cannot\nmove or fast travel out of radius.\nEnemy units outside of radius cannot\nmove or fast travel into radius.",
+      "description": "**This turn:** While an enemy hero outside of\nradius is performing an action, spaces in\nradius count as obstacles. While an enemy\nhero in radius is performing an action,\nspaces outside of radius count as obstacles.",
       "color": "SILVER",
-      "initiative": 11,
+      "initiative": 13,
       "primaryAction": "SKILL",
       "modifier": "AREA",
       "modifierValue": 2,
       "secondaryDefense": 2
     },
     {
-      "name": "Thunder and Lightning",
-      "description": "After you perform a basic skill one enemy\nhero in play discards a card, if able.",
+      "name": "High Voltage",
+      "description": "Each time after your perform a basic skill,\nyou may defeat an enemy minion in radius;\nan enemy hero who was adjacent to that\nminion discards a card, if able.",
       "color": "PURPLE",
-      "level": 4
+      "level": 4,
+      "modifier": "AREA",
+      "modifierValue": 3
     },
     {
       "name": "Lift Up",
-      "description": "Move a unit or a token not adjacent to\nyou and in radius, up to 1 space, without\nmoving it away from you, or closer to you.",
+      "description": "Move a unit, or a token, in radius 1 space,\nwithout moving it way from you or closer to\nyou. May repeat once on the same target.",
       "color": "BLUE",
       "level": 1,
-      "initiative": 9,
+      "initiative": 10,
       "primaryAction": "SKILL",
       "modifier": "AREA",
       "modifierValue": 2,
@@ -5016,28 +5022,30 @@
     },
     {
       "name": "Shock",
-      "description": "Target a unit adjacent to you. Before the\nattack: Up to one enemy hero adjacent to you,\nexcept the target, discards a card, if able.",
+      "description": "Target a unit adjacent to you.\nAfter the attack: An enemy hero in radius and\nnot adjacentto you discards a card, if able.",
       "color": "RED",
       "level": 1,
       "initiative": 8,
       "primaryAction": "ATTACK",
       "primaryValue": 5,
+	  "modifier": "AREA",
+	  "modifierValue": 2,
       "secondaryMovement": 4,
       "secondaryDefense": 6
     },
     {
       "name": "Stop Projectiles",
-      "description": "If the attacker is not adjacent\nto you, block a ranged attack.",
+      "description": "Block a ranged attack.",
       "color": "GREEN",
       "level": 1,
-      "initiative": 4,
+      "initiative": 3,
       "primaryAction": "DEFENSE",
       "primaryValueSign": "EXCLAMATION",
       "secondaryMovement": 2
     },
     {
       "name": "Control Gravity",
-      "description": "Move a unit or a token not adjacent to\nyou and in radius, up to 1 space, without\nmoving it away from you, or closer to you.\nMay repeat once.",
+      "description": "Move a unit, or a token, in radius 1 space,\nwithout moving it away from you or closer to\nyou. May repeat once on the same target.",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -5047,14 +5055,14 @@
       "initiative": 10,
       "primaryAction": "SKILL",
       "modifier": "AREA",
-      "modifierValue": 2,
+      "modifierValue": 3,
       "secondaryMovement": 3,
       "secondaryDefense": 5,
       "item": "DEFENSE"
     },
     {
       "name": "Electrocute",
-      "description": " Target a unit adjacent to you. Before the\n attack: Up to one enemy hero in radius,\n except the target, discards a card, if able.\n~(Even though there is a radius icon, this is a non-ranged attack\n~and the original target of the attack must be adjacent to you.)",
+      "description": "Target a unit adjacent to you.\nAfter the attack: An enemy hero in radius and\nnot adjacent to you discards a card, if able.",
       "color": "RED",
       "level": 2,
       "variant": {
@@ -5065,14 +5073,14 @@
       "primaryAction": "ATTACK",
       "primaryValue": 5,
       "modifier": "AREA",
-      "modifierValue": 2,
+      "modifierValue": 3,
       "secondaryMovement": 4,
       "secondaryDefense": 6,
       "item": "INITIATIVE"
     },
     {
       "name": "Deflect Projectiles",
-      "description": "If the attacker is not adjacent to you,\nblock a ranged the attack. If you do, the\nattacker discards a card, if able.",
+      "description": "Block a ranged attack; it you do, an enemy\nhero in range, other than the attacker,\ndiscards a card, if able.",
       "color": "GREEN",
       "level": 2,
       "variant": {
@@ -5082,12 +5090,14 @@
       "initiative": 3,
       "primaryAction": "DEFENSE",
       "primaryValueSign": "EXCLAMATION",
+      "modifier": "AREA",
+      "modifierValue": 3,	  
       "secondaryMovement": 2,
-      "item": "ATTACK"
+      "item": "INITIATIVE"
     },
     {
       "name": "Kinetic Repulse",
-      "description": "Push every enemy unit adjacent to you 2\nspaces; each enemy hero that was stopped\nby an obstacle discards a card, if able.",
+      "description": "Push up to 2 enemy units adjacent to you\n3 spaces; if a pushed hero is stopped by an\nobstacle, that hero discards a card, if able.",
       "color": "BLUE",
       "level": 2,
       "variant": {
@@ -5133,28 +5143,28 @@
       "modifierValue": 3,
       "secondaryMovement": 2,
       "secondaryDefense": 3,
-      "item": "INITIATIVE"
+      "item": "ATTACK"
     },
     {
       "name": "Center of Mass",
-      "description": "Move a unit or a token not adjacent to\nyou and in radius, up to 1 space, without\nmoving it away from you, or closer to you.\nMay repeat up to two times.",
+      "description": "Move a unit, or a token, in radius 1 space,\nwithout moving it away from you or closer\nto you. May repeat up to two times\non the same target.",
       "color": "BLUE",
       "level": 3,
       "variant": {
         "first": 1,
         "second": 2
       },
-      "initiative": 10,
+      "initiative": 11,
       "primaryAction": "SKILL",
       "modifier": "AREA",
-      "modifierValue": 2,
+      "modifierValue": 3,
       "secondaryMovement": 3,
       "secondaryDefense": 6,
-      "item": "RANGE"
+      "item": "DEFENSE"
     },
     {
       "name": "Electroblast",
-      "description": "Target a unit adjacent to you. Before the attack:\nUp to one enemy hero in radius, except the\ntarget, discards a card, or is defeated.",
+      "description": "Target a unit adjacent to you. After the attack:\nAn enemy hero in radius and not adjacent\nto you discards a card, or is defeated.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -5165,44 +5175,46 @@
       "primaryAction": "ATTACK",
       "primaryValue": 6,
       "modifier": "AREA",
-      "modifierValue": 2,
+      "modifierValue": 3,
       "secondaryMovement": 4,
       "secondaryDefense": 7,
-      "item": "MOVEMENT"
+      "item": "INITIATIVE"
     },
     {
       "name": "Reflect Projectiles",
-      "description": "If the attacker is not adjacent to you, block a\nranged attack. If you do, the attacker discards\na card, if able, **This turn:** You are immune to\nranged attacks of heroes not adjacent to you.",
+      "description": "Block a ranged attack; it you do, an enemy\nhero in range discards a card, if able.",
       "color": "GREEN",
       "level": 3,
       "variant": {
         "first": 1,
         "second": 2
       },
-      "initiative": 3,
+      "initiative": 2,
       "primaryAction": "DEFENSE",
       "primaryValueSign": "EXCLAMATION",
+      "modifier": "RANGE",
+      "modifierValue": 3,	  
       "secondaryMovement": 2,
       "item": "AREA"
     },
     {
       "name": "Kinetic Blast",
-      "description": "Push every enemy unit adjacent to you\n3 spaces; each enemy hero that was stopped\nby an obstacle discards a card, if able.",
+      "description": "Push up to 2 enemy units adjacent to you\n3 or 4 spaces; if a pushed hero is stopped by\nan obstacle, that hero discards a card, if able.",
       "color": "BLUE",
       "level": 3,
       "variant": {
         "first": 2,
         "second": 2
       },
-      "initiative": 10,
+      "initiative": 11,
       "primaryAction": "SKILL",
       "secondaryMovement": 3,
       "secondaryDefense": 6,
-      "item": "ATTACK"
+      "item": "RANGE"
     },
     {
       "name": "Thunder Boomerang",
-      "description": "Target a unit in range, not in a straight line.\nIf you defeat an enemy hero, may repeat once.",
+      "description": "Target a unit in range, not in a straight line.\nAfter the attack: If you target a hero\nmay repeat once on a different target.",
       "color": "RED",
       "level": 3,
       "variant": {
@@ -5216,7 +5228,7 @@
       "modifierValue": 3,
       "secondaryMovement": 4,
       "secondaryDefense": 4,
-      "item": "DEFENSE"
+      "item": "MOVEMENT"
     },
     {
       "name": "Mass Telekinesis",
@@ -5227,13 +5239,13 @@
         "first": 2,
         "second": 2
       },
-      "initiative": 3,
+      "initiative": 2,
       "primaryAction": "SKILL",
       "modifier": "RANGE",
       "modifierValue": 3,
       "secondaryMovement": 2,
       "secondaryDefense": 4,
-      "item": "INITIATIVE"
+      "item": "ATTACK"
     }
   ],
   "whisper": [

@@ -466,12 +466,12 @@
       )
   }
 
-  $: showNumbers = true // Disable this to show numbers by default
+  $: showNumbers = false // Enable this to show numbers by default
   $: showHandicap = false
 
   const labelColor = (disabled: boolean): string => disabled ? "gray" : "white"
 
-  $: disableShowNumbers = false // Edit this to show numbers
+  $: disableShowNumbers = true // Disable this to enable the button
 
   const hero = heroes[heroName] as Hero
   const fullName = hero.name + " " + hero.title
