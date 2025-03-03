@@ -518,7 +518,7 @@
   $: statImages = new Map()
 
   onMount(async () => {
-    banner = (await import(`../../lib/images/avatars_full/${heroName}.png`)).default
+    banner = (await import(`../../lib/images/avatars_full/${heroName}.jpg`)).default
 
     for (const stat of stats) {
       statImages.set(stat, (await import(`../../lib/images/stat_icons/${stat}_white.png`)).default)
