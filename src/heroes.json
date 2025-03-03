@@ -3043,7 +3043,7 @@
     "sabina": [
         {
             "name": "Point Blank Shot",
-            "description": "",
+            "description": "Target a unit in range. After the attack:\nIf the target is adjacent to you, push the target 1 space.",
             "color": "GOLD",
             "initiative": 12,
             "primaryAction": "ATTACK",
@@ -3206,7 +3206,24 @@
             "secondaryDefense": 6,
             "item": "DEFENSE"
         },
-        {
+		{
+		  "name": "Close Support",
+		  "description": "An enemy hero in radius adjacent to your\nfriendly minion discards a card, if able.",
+		  "color": "GREEN",
+		  "level": 2,
+		  "variant": {
+			"first": 2,
+			"second": 2
+		  },
+		  "initiative": 3,
+		  "primaryAction": "SKILL",
+          "modifier": "RANGE",
+          "modifierValue": 3,
+		  "secondaryMovement": 2,
+		  "secondaryDefense": 3,
+		  "item": "INITIATIVE"
+		},
+		{
             "name": "Ready and Waiting",
             "description": "Swap two minions in radius,\nignoring heavy minion immunity.",
             "color": "BLUE",
